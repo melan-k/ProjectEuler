@@ -29,7 +29,7 @@ def is_prime(num) :
 def sieve_of_sundaram(limit) :
     Assert(limit > 1)
     a = range(1, limit)
-        
+
 
 def sieve_of_atkin(limit):
     results = [2,3,5]
