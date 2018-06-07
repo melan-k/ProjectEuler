@@ -50,3 +50,7 @@ def sieve_of_atkin(limit):
         if sieve[index]:
             results.append(index)
     return results
+
+def get_each_primes_till_one_million():
+    with open('./lib/primes_1000000.txt', 'r', encoding = 'utf-8') as f :
+        return f.read().rstrip().split(',')
