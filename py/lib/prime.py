@@ -26,11 +26,6 @@ def divisors(num) :
 def is_prime(num) :
     return each_primes(num)[-1] == num
 
-def sieve_of_sundaram(limit) :
-    Assert(limit > 1)
-    a = range(1, limit)
-
-
 def sieve_of_atkin(limit):
     results = [2,3,5]
     sieve = [False]*(limit+1)
