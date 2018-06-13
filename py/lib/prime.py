@@ -20,8 +20,21 @@ def each_primes(upper) :
 def primes_count(upper) :
     return len(each_primes(upper))
 
-def divisors(num) :
-    pass
+def get_divisors(num, except_self=False):
+    if num < 1:
+        return []
+    elif num == 1:
+        return [1]
+    else:
+        divisor_list = []
+        divisor_list.append(1)
+        for i in range(2, num // 2 + 1):
+            if num % i == 0:
+                divisor_list.append(i)
+        if not except_self:
+            divisor_list.append(num)
+
+        return divisor_list
 
 def is_prime(num) :
     return each_primes(num)[-1] == num
@@ -53,4 +66,4 @@ def sieve_of_atkin(limit):
 
 def get_each_primes_till_one_million():
     with open('./lib/primes_1000000.txt', 'r', encoding = 'utf-8') as f :
-        return f.read().rstrip().split(',')
+        return [int(n) for n in f.read().rstrip().split(',')]
