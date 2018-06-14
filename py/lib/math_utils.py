@@ -1,4 +1,4 @@
-import math
+from math import log10, factorial
 
 def calc_digit(num) :
     if num == 0 :
@@ -19,5 +19,11 @@ def each_num_of_points(num) :
 
 def comb(n, r):
     assert((type(n)==int) and (type(r)==int))
-    assert(n > r)
-    return factorial(n) / (factorial(r) * factorial(n - r))
+    assert(n >= r)
+    return int(factorial(n) / (factorial(r) * factorial(n - r)))
+
+def odd(n):
+    return n % 2 != 0
+
+def even(n):
+    return n % 2 == 0
