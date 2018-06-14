@@ -27,3 +27,11 @@ def odd(n):
 
 def even(n):
     return n % 2 == 0
+
+def get_palindrome_num(num):
+    assert(type(num)==int)
+    return int(str(num)[::-1])
+
+def is_palindrome_num(num):
+    assert(type(num)==int)
+    return num==get_palindrome_num(num)
