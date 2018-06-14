@@ -16,3 +16,8 @@ def each_num_of_points(num) :
             num -= point * num_of_digit
 
     return a
+
+def comb(n, r):
+    assert((type(n)==int) and (type(r)==int))
+    assert(n > r)
+    return factorial(n) / (factorial(r) * factorial(n - r))
