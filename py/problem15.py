@@ -1,12 +1,4 @@
-sum = 0
-def calcRoute(width_, height_) :
-    global sum
-    if width_ >= 2 :
-        for n in range(height_ + 1) :
-            calcRoute(width_ - 1, n)
-    elif width_ == 1 :
-        sum += height_ + 1
+from lib.math_utils import comb
 
-    return sum
-
-print(calcRoute(20, 20))
+n = 20
+print(comb(n * 2, n))
