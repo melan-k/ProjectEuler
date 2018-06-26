@@ -35,5 +35,18 @@ class TestPrime(unittest.TestCase) :
         expected = 12021
         self.assertNotEqual(expected, value)
 
+    def test_is_pentagonal_num(self):
+        value = mu.is_pentagonal_num(12)
+        expected = True
+        self.assertEqual(expected, value)
+
+        value = mu.is_pentagonal_num(23)
+        expected = False
+        self.assertEqual(expected, value)
+
+        value = mu.is_pentagonal_num(10000000)
+        expected = False
+        self.assertEqual(expected, value)
+
 if __name__ == "__main__" :
     unittest.main()

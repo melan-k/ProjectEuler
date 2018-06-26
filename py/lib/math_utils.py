@@ -34,3 +34,14 @@ def get_reverse_num(num):
 def is_palindrome_num(num):
     assert(type(num)==int)
     return num==get_reverse_num(num)
+
+def is_pentagonal_num(num):
+    n = 1
+    p = 0
+    while(True):
+        p = int(n * (3 * n - 1) / 2)
+        if p == num:
+            return True
+        n += 1
+        if p > num :
+            return False
