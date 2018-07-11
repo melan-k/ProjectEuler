@@ -1,5 +1,5 @@
-test.py
+test.*
 p042_words.txt
 *__pycache__/
-/lib/primes_*00.txt
+/lib/primes_*.txt
 /lib/__init__.py
